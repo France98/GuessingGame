@@ -16,9 +16,9 @@ public class GameConsole {
 	 * @param game is the name of GuessingGame object.
 	 * @return all the result of the game.
 	 */
-	public void play(GuessingGame game) {
+	public int play(GuessingGame game) {
 		boolean running = true;
-		int num;
+		int num = 0;
 		Scanner input = new Scanner(System.in);
 		String title = "Guessing Game";
 		System.out.println(title);
@@ -33,5 +33,6 @@ public class GameConsole {
 			System.out.println(game.getHint());
 		}
 		System.out.print("You used " + (game.getCount()) + " guesses.");
+		return num;
 	}
 }
